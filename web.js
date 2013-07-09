@@ -3,7 +3,8 @@ var fs = require('fs');
 var index = fs.readFileSync('index.html');
 
 express.createServer(function (request, response) {
-  response.send(index);
+response.WriteHead(200,{'Content -Type':'text/plain'}); 
+ response.end(index);
 });
 
 
