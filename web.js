@@ -1,11 +1,6 @@
-var express = require('express');
-var fs = require('fs');
-var index = fs.readFileSync('index.html');
-
-express.createServer(function (request, response) {
-response.WriteHead(200,{'Content -Type':'text/plain'}); 
- response.end(index);
-});
+var buffer = new Buffer(100);
+buffer=fs.readFileSync('index.html');
+console.log(buffer.toString('utf8',0,buffer.length);
 
 
 var port = process.env.PORT || 5000;
